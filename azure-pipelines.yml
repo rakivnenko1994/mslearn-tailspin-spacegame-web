@@ -9,10 +9,17 @@ pool:
 variables:
   buildConfiguration: 'Release'
   wwwrootDir: 'Tailspin.SpaceGame.Web/wwwroot'
+<<<<<<< HEAD
   dotnetSdkVersion: '3.1.100'
 
 steps:
 - task: UseDotNet@2
+=======
+  dotnetSdkVersion: '2.1.505'
+
+steps:
+- task: DotNetCoreInstaller@0
+>>>>>>> Add SDK version variable
   displayName: 'Use .NET Core SDK $(dotnetSdkVersion)'
   inputs:
     version: '$(dotnetSdkVersion)'
@@ -56,3 +63,7 @@ steps:
 - task: PublishBuildArtifacts@1
   displayName: 'Publish Artifact: drop'
   condition: succeeded()
+<<<<<<< HEAD
+=======
+  displayName: 'Publish Artifact: drop'
+>>>>>>> Add SDK version variable
